@@ -8,3 +8,5 @@ try:
     print('Response:', response.text)
 except requests.exceptions.RequestException as e:
     print(f'Error: {e}')
+    print(f'Detailed error: {response.text if "response" in locals() else None}')
+
